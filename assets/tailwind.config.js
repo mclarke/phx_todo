@@ -7,6 +7,10 @@ module.exports = {
     '../lib/*_web/**/*.*ex'
   ],
   theme: {
+    fontFamily: {
+      sans: ['Lato', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
     extend: {},
   },
   plugins: [
