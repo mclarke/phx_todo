@@ -49,7 +49,6 @@ config :phoenix, :json_library, Jason
 
 config :tailwind,
   version: System.get_env("MIX_TAILWIND_VERSION"),
-  path: System.get_env("MIX_TAILWIND_PATH"),
   default: [
     args: ~w(
       --config=tailwind.config.js
