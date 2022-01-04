@@ -22,5 +22,9 @@ services:
       - '4000:4000'
     volumes:
       - .:/app
+    # for debugging with pry
+    tty: true
+    stdin_open: true
+    command: iex -S mix phx.server
 volumes:
   pgdata: null

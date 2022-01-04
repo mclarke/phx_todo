@@ -14,5 +14,4 @@ WORKDIR /app
 
 COPY mix.exs .
 COPY mix.lock .
-
-CMD mix deps.get && mix phx.server
+RUN mix deps.get
