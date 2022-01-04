@@ -24,13 +24,6 @@
         <a href="https://phoenixframework.org/" class="phx-logo">
           <img src={Routes.static_path(@conn, "/images/phoenix.png")} alt="Phoenix Framework Logo"/>
         </a>
-        <div x-data="{ open: false }">
-          <button @click="open = true">Expand</button>
-      
-          <span x-show="open">
-            Content...
-          </span>
-      </div>
       </section>
     </header>
     <%= @inner_content %>
