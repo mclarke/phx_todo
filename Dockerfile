@@ -14,4 +14,4 @@ WORKDIR /app
 
 COPY mix.exs .
 COPY mix.lock .
-RUN mix deps.get
+RUN mix deps.get && mix ecto.create

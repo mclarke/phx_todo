@@ -1,15 +1,17 @@
 version: '3.6'
 services:
   db:
+    image: 'postgres:11-alpine'
     environment:
       PGDATA: /var/lib/postgresql/data/pgdata
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_USER: postgres
-      POSTGRES_HOST_AUTH_METHOD: trust
-    image: 'postgres:11-alpine'
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: phx_todo
+      #POSTGRES_HOST_AUTH_METHOD: trust
     restart: always
     volumes:
       - 'pgdata:/var/lib/postgresql/data'
+    ports:
+      - "7654:5432"
   web:
     build: .
     depends_on:
